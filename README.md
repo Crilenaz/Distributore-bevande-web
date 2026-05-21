@@ -1,2 +1,2 @@
 # Distributore-bevande-web
-Simulazione di distributore di bevande con html/css/js con autenticazione simulata
+Simulazione di distributore di bevande attraverso html/css/js con autenticazione lato client
