@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login {
+    width: 300px;
+    height: fit-content;
+    border: 2px solid black;
+    text-align: center;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    margin-top: 20vh;
+    gap: 10px;
+}
+
+#monete {
+    display: none;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.distrheader {
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgb(206, 206, 206);
+}
+
+.header-link {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 8px 0;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.header-link a {
+    color: #333;
+    font-weight: 600;
+}
+
+
+#paginadistributore {
+    display: none;
+    text-align: center;
+}
+
+#usrfailtxt, #passfailtxt {
+    color: red;
+    visibility: hidden;
+    height: 16px;
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.distributore {
+    position: relative;
+    width: 1000px;
+}
+
+.distributore .distr {
+    position: absolute;
+    width: 100%;
+}
+
+.slotcc1, .slotsp2, .slotfa3, .slotac4, .slot7u5 {
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.slotcc1 { top: 280px; left: 892px; width: 33px; height: 42px; }
+.slotsp2 { top: 275px; left: 822px; }
+.slotfa3 { top: 275px; left: 857px; }
+.slotac4 { top: 275px; left: 925px; height: 47px; }
+.slot7u5 { top: 275px; left: 960px; height: 47px; }
+
+.bevanda-caduta {
+    position: absolute;
+    width: 35px;
+    height: 50px;
+    pointer-events: none;
+    animation: caduta 0.5s linear forwards;
+    z-index: 9999;
+}
+
+@keyframes caduta {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(120px); }
+}
+
+
+
+
+.display-credito {
+    user-select: none;
+    position: absolute;
+    top: 140px;
+    left: 1130px;
+    width: 35px;
+    height: 25px;
+    background: #111;
+    color: #0f0;
+    font-family: monospace;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 2px solid #333;
+}
+
+.resto {
+    user-select: none;
+    position: absolute;
+    top: 340px;
+    left: 1130px;
+    width: 35px;
+    height: 25px;
+    background: #111;
+    color: #0f0;
+    font-family: monospace;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 2px solid #333;
+    cursor: pointer;
+}
+
+.portafogli {
+    position: absolute;
+    top: 340px;
+    left: 150px;
+    cursor: pointer;
+}
+
+.moneta {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#vc { top: 340px; left: 190px; }
+#cc { top: 290px; left: 260px; }
+#ue { top: 340px; left: 330px; }
+
+#pannelloTecnico {
+    display: none;
+    width: 320px;
+    margin: 20vh auto;
+    padding: 24px;
+    border: 4px solid #000;
+    color: #000000;
+    text-align: center;
+}

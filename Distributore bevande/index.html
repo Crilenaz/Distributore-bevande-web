@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link id="favicon" rel="icon" type="image/x-icon" href="imgs/loginimg.ico">
+</head>
+
+<body>
+
+    <div id="paginadistributore">
+        <div class="distrheader" id="distrheader">
+            Benvenuto, <span id="benvenuto" style="margin-right:70%"></span>
+            <button onclick="logout()" style="margin-right:10%">Logout</button>
+        </div>
+
+        <div class="header-link">
+            <a href="Istruzioni.html" target="_blank">Istruzioni</a>
+        </div>
+        
+        <div id="distributore" class="distributore">
+            <img draggable="false" src="./imgs/distributoreimg.png" height="600px" alt="distributore" id="distrimg" class="distr">
+
+            <img draggable="false" src="./imgs/cocacola.png" height="100px" class="slotcc1" id="slot1" onclick="acquistaBevanda('coca')">
+            <img draggable="false" src="./imgs/sprite.png" height="100px" class="slotsp2" id="slot2" onclick="acquistaBevanda('sprite')">
+            <img draggable="false" src="./imgs/fanta.png" height="100px" class="slotfa3" id="slot3" onclick="acquistaBevanda('fanta')">
+            <img draggable="false" src="./imgs/Acqua.png" height="100px" class="slotac4" id="slot4" onclick="acquistaBevanda('acqua')">
+            <img draggable="false" src="./imgs/7up.png" height="100px" class="slot7u5" id="slot5" onclick="acquistaBevanda('up7')">
+            
+
+            <div class="display-credito" id="credito">€ 0.00</div>
+            <img draggable="false" src="./imgs/portafogli.png" class="portafogli" onclick="toggleMonete()">
+
+            <div class="monete" id="monete">
+                <img draggable="false" src="./imgs/20cent.png" class="moneta" id="vc" onclick="aggiungiCredito(0.20)">
+                <img draggable="false" src="./imgs/50cent.png" class="moneta" id="cc" onclick="aggiungiCredito(0.50)">
+                <img draggable="false" src="./imgs/1eur.png" class="moneta" id="ue" onclick="aggiungiCredito(1.00)">
+            </div>
+
+            <div id="resto" class="resto" onclick="ritiraResto()">€ 0.00</div>
+        </div>
+
+        <div id="pannelloTecnico">
+            <h2>Pannello Tecnico</h2>
+
+            <h3>Gestione Bevande</h3>
+
+            <select id="Selettore" onchange="aggiornaUiTecnico()"></select>
+
+            <p>Quantità: <span id="qtBevanda"></span></p>
+            <button onclick="ricarica()">Ricarica +1</button>
+
+            <h3>Soldi nel deposito</h3>
+            <p>€ <span id="soldiDeposito"></span></p>
+            <button onclick="ritiraSoldi()">Ritira soldi</button>
+        </div>
+    </div>
+    
+    <div class="login" id="login">
+        <h2>Login distributore</h2>
+
+        <div class="input">
+            Username<input type="text" id="usr">
+            <span id="usrfailtxt">L'username può contenere solo lettere.</span>
+        </div>
+
+        <div class="input">
+            Password<input type="password" id="pass" maxlength="4">
+            <span id="passfailtxt">La password può contenere solo caratteri alfanumerici.</span>
+        </div>
+
+        <button type="button" onclick="checklogin()">Login</button>
+    </div>
+
+</body>
+<script src="script.js"></script>
+</html>
